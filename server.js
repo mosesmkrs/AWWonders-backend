@@ -30,4 +30,6 @@ app.listen(process.env.PORT, () => {
     console.log(error)
 })
 
+export default app
+
 
