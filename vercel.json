@@ -4,8 +4,19 @@
      { "src": "index.js", "use": "@vercel/node" }
    ],
    "routes": [
-     { "src": "/api/workouts/(.*)", "dest": "/api/workouts/$1" },
-     { "src": "/api/users/(.*)", "dest": "/api/users/$1" },
+     { "src": "/api/workouts", "dest": "/workouts" },
+     { "src": "/api/users", "dest": "/users" },
      { "src": "/(.*)", "dest": "/index.js" }
-   ]
-}
+   ],
+   "env": {
+     "MONGO_URI": "mongodb+srv://mosemkrs:mosemkrs@project1.t7bnrrh.mongodb.net/",
+     "SECRET_KEY": "iL9m45kP!cGz$Fj*2Z"
+   },
+   "envSecrets": {
+     "mosemkrs": {
+       "mongo-uri": "${MONGO_URI}",
+       "secret-key": "${SECRET_KEY}"
+     }
+   }
+ }
+ 
