@@ -3,6 +3,9 @@ const express = require('express')
 const workoutRoutes = require('./routes/workouts')
 const userRoutes = require('./routes/userRoutes'); 
 const mongoose = require('mongoose')
+const cors = require('cors');
+
+
 
 
 //express app
@@ -14,6 +17,10 @@ app.use((req,res,next) => {
     console.log(req.path,req.method)
     next()
 })
+
+//cors
+app.use(cors({ origin: 'https://aw-wonders-frontend.vercel.app' }));
+
    //routes
 app.use('/api/workouts/',workoutRoutes)
 app.use('/api/users/', userRoutes);
