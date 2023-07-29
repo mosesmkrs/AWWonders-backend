@@ -1,18 +1,7 @@
 {
-    "version":2,
-    "builds":[
-        {
-        "src":"*.js",
-        "use":"@vercel/node"
-       }
-    ],
-    
-        "routes": [
-            {
-                "src":"/api/workouts(.*)",
-                "dest":"/api/workouts"
-            }
-        ]
-    
-
-}
+    "functions": {
+      "rewrites": [
+        { "source": "/api/(.*)", "function": "api/$1" }
+      ]
+    }
+  }
