@@ -1,7 +1,6 @@
 {
-    "functions": {
-      "rewrites": [
-        { "source": "/api/(.*)", "function": "api/$1" }
-      ]
-    }
+    "rewrites": [
+      { "source": "/api/(.*)", "destination": "/api/$1" }
+    ]
   }
+  
