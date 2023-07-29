@@ -9,8 +9,8 @@
      { "src": "/(.*)", "dest": "/index.js" }
    ],
    "env": {
-     "MONGO_URI": "mongodb+srv://mosemkrs:mosemkrs@project1.t7bnrrh.mongodb.net/",
-     "SECRET_KEY": "iL9m45kP!cGz$Fj*2Z"
+     "MONGO_URI": "@mosemkrs/mongo-uri",
+     "SECRET_KEY": "@mosemkrs/secret-key"
    },
    "envSecrets": {
      "mosemkrs": {
