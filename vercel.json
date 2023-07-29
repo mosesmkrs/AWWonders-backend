@@ -7,16 +7,6 @@
      { "src": "/api/workouts", "dest": "/workouts" },
      { "src": "/api/users", "dest": "/users" },
      { "src": "/(.*)", "dest": "/index.js" }
-   ],
-   "env": {
-     "MONGO_URI": "@mosemkrs/mongo-uri",
-     "SECRET_KEY": "@mosemkrs/secret-key"
-   },
-   "envSecrets": {
-     "mosemkrs": {
-       "mongo-uri": "${MONGO_URI}",
-       "secret-key": "${SECRET_KEY}"
-     }
-   }
+   ]
  }
  
