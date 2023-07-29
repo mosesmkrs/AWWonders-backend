@@ -1,10 +1,15 @@
 {
-    "version": 2,
-    "name": "music-album",
-    "builds": [
-       { "src": "app.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-       { "src": "/(.*)", "dest": "/app.js" }
-    ]
+   "version": 2,
+   "builds": [
+     { "src": "server.js", "use": "@vercel/node" }
+   ],
+   "routes": [
+     { "src": "/api/workouts/(.*)", "dest": "/api/workouts/$1" },
+     { "src": "/api/users/(.*)", "dest": "/api/users/$1" },
+     { "src": "/(.*)", "dest": "/server.js" }
+   ],
+   "env": {
+     "MONGO_URI": "mongodb+srv://mosemkrs:mosemkrs@project1.t7bnrrh.mongodb.net/"
+   }
  }
+ 
