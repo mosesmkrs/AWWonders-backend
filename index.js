@@ -5,7 +5,10 @@ const userRoutes = require('./routes/userRoutes');
 const mongoose = require('mongoose')
 const cors = require('cors');
 
-
+const corsOptions = {
+    origin: 'https://aw-wonders-frontend.vercel.app',
+  };
+  
 
 
 //express app
@@ -18,8 +21,9 @@ app.use((req,res,next) => {
     next()
 })
 
+
 //cors
-app.use(cors({ origin: 'https://aw-wonders-frontend.vercel.app' }));
+app.use(cors(corsOptions));
 
    //routes
 app.use('/api/workouts/',workoutRoutes)
